@@ -1,0 +1,20 @@
+{
+    "name": "HanziRogue.Presentation",
+    "rootNamespace": "HanziRogue.Presentation",
+    "references": [
+        "HanziRogue.Core",
+        "HanziRogue.Gameplay",
+        "Unity.Entities",
+        "Unity.Mathematics",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "versionDefines": [],
+    "defineConstraints": [],
+    "noEngineReferences": false
+}

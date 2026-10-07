@@ -1,0 +1,23 @@
+{
+    "name": "HanziRogue.Editor",
+    "rootNamespace": "HanziRogue.Editor",
+    "references": [
+        "HanziRogue.Core",
+        "HanziRogue.Gameplay",
+        "HanziRogue.Presentation",
+        "Unity.Entities",
+        "Unity.Mathematics",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "versionDefines": [],
+    "defineConstraints": [],
+    "noEngineReferences": false
+}

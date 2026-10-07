@@ -1,0 +1,54 @@
+# Unity 生成的本地缓存／临时文件，永不入库
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+[Ss]creenshots/
+[Uu]ser[Ss]ettings/
+[Uu]nityGenerated/
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity3D 生成的元文件垃圾
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity 崩溃报告
+sysinfo.txt
+crashlytics-build.properties
+
+# 构建产物
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python 烘焙脚本缓存
+Tools/__pycache__/
+Tools/*.pyc

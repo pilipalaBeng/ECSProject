@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e316205605c1564aa9a9e7bfafe6457, type: 3}
+  m_Name: ScaleConfig
+  m_EditorClassIdentifier: 
+  EnemyCount: 1000
+  FieldSize: 50
+  SpawnInnerRadius: 8
+  HeroSpeed: 14
+  EnemySpeed: 8
+  CellSize: 3
+  SeparationRadius: 1.15
+  NeighborRadius: 2.5
+  SeparationWeight: 1.6
+  CohesionWeight: 0
+  AlignmentWeight: 0
+  SeekWeight: 2.2
+  TurnRate: 5
+  SpeedVariance: 0.12
