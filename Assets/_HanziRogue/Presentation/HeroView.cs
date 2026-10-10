@@ -16,17 +16,16 @@ namespace HanziRogue.Presentation
         [Tooltip("抬离地面的高度，需高于字潮渲染层，否则会被「兵」字盖住。")]
         [SerializeField] private float surfaceOffset = 0.12f;
 
-        private EntityQuery _query;
-        private bool _queryReady;
+        private readonly EcsReadQuery _heroQuery = new(typeof(Position2D), typeof(HeroTag));
 
         private void Update()
         {
-            if (!EnsureQuery())
+            if (!_heroQuery.TryGet(out EntityQuery query))
             {
                 return;
             }
 
-            var positions = _query.ToComponentDataArray<Position2D>(Allocator.TempJob);
+            var positions = query.ToComponentDataArray<Position2D>(Allocator.TempJob);
             if (positions.Length > 0)
             {
                 float2 p = positions[0].Value;
@@ -34,24 +33,6 @@ namespace HanziRogue.Presentation
             }
 
             positions.Dispose();
-        }
-
-        private bool EnsureQuery()
-        {
-            if (_queryReady)
-            {
-                return true;
-            }
-
-            World world = World.DefaultGameObjectInjectionWorld;
-            if (world == null)
-            {
-                return false;
-            }
-
-            _query = world.EntityManager.CreateEntityQuery(typeof(Position2D), typeof(HeroTag));
-            _queryReady = true;
-            return true;
         }
     }
 }

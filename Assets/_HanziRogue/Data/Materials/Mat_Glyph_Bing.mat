@@ -30,6 +30,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _Cutoff: 0.35
+    - _GlyphSize: 1.1
     m_Colors:
     - _Color: {r: 0.86, g: 0.27, b: 0.21, a: 1}
+    - _FlashColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

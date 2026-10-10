@@ -17,12 +17,14 @@ MonoBehaviour:
   SpawnInnerRadius: 8
   HeroSpeed: 14
   EnemySpeed: 8
-  CellSize: 3
+  CellSizeFactor: 1
   SeparationRadius: 1.15
   NeighborRadius: 2.5
-  SeparationWeight: 1.6
   CohesionWeight: 0
   AlignmentWeight: 0
   SeekWeight: 2.2
   TurnRate: 5
   SpeedVariance: 0.12
+  StopRadius: 1.5
+  ArriveRadius: 3.5
+  HeroCoreRadius: 0.9

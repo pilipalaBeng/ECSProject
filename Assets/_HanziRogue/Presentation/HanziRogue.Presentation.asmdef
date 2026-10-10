@@ -6,7 +6,8 @@
         "HanziRogue.Gameplay",
         "Unity.Entities",
         "Unity.Mathematics",
-        "Unity.Collections"
+        "Unity.Collections",
+        "Unity.Burst"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

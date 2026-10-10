@@ -31,8 +31,7 @@ namespace HanziRogue.Presentation
         [SerializeField] private float zoomSharpness = 6f;
 
         private Camera _camera;
-        private EntityQuery _heroQuery;
-        private bool _queryReady;
+        private readonly EcsReadQuery _heroQuery = new(typeof(Position2D), typeof(HeroTag));
         private int _zoomIndex = 1;
 
         /// <summary>当前视野档位名称。HUD 只读展示。</summary>
@@ -106,12 +105,12 @@ namespace HanziRogue.Presentation
         {
             position = transform.position;
 
-            if (!EnsureQuery())
+            if (!_heroQuery.TryGet(out EntityQuery query))
             {
                 return false;
             }
 
-            var positions = _heroQuery.ToComponentDataArray<Position2D>(Allocator.TempJob);
+            var positions = query.ToComponentDataArray<Position2D>(Allocator.TempJob);
             bool found = positions.Length > 0;
             if (found)
             {
@@ -121,24 +120,6 @@ namespace HanziRogue.Presentation
 
             positions.Dispose();
             return found;
-        }
-
-        private bool EnsureQuery()
-        {
-            if (_queryReady)
-            {
-                return true;
-            }
-
-            World world = World.DefaultGameObjectInjectionWorld;
-            if (world == null)
-            {
-                return false;
-            }
-
-            _heroQuery = world.EntityManager.CreateEntityQuery(typeof(Position2D), typeof(HeroTag));
-            _queryReady = true;
-            return true;
         }
     }
 }
